@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakrithi-chatbot</title>
+    <!-- Add Bootstrap CSS Link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F5EEDB;
+        }
+        .navbar {
+            background-color: #D3D3A7; 
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Welcome to Prakruti Chatbot</a>
+        <!-- Add Navigation Links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">Registration</a>
+                
+                
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="jumbotron text-center text-white" id="home" style="background-image: url('https://source.unsplash.com/1920x1080/?ayurveda'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1 class="display-4">Discover Your Prakruti</h1>
+            <p class="lead">
+                Ayurveda's holistic approach to health. Take the Prakruti assessment and make informed choices about your diet and lifestyle.
+            </p>
+            <a href="https://prakriti-assessment.netlify.app/" class="btn btn-primary btn-lg">Take Assessment</a>
+        
+        </div>
+    </header>
+
+     <!-- About Section -->
+     <section id="about" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Ayurveda and Tridosha</h2>
+                <p>
+                    Ayurveda is a traditional system of medicine that originated in India thousands of years ago. It emphasizes the balance of three fundamental energies known as Tridosha: Vata, Pitta, and Kapha.
+                </p>
+                <p>
+                    Vata represents the elements of air and ether and is associated with movement. Pitta represents the elements of fire and water and is linked to digestion and metabolism. Kapha embodies the elements of water and earth and is responsible for stability and structure.
+                </p>
+                <p>
+                    An individual's unique Prakruti is determined by the dominance of one or more of these doshas. Understanding your Prakruti can help you make informed choices about diet, lifestyle, and healthcare.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <!-- You can add images or symbols related to Ayurveda here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Prakruti Assessment Section -->
+    <section id="assessment" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Why Prakruti Assessment?</h2>
+                <p>
+                    Ayurveda believes in individualized treatment and diet plans. Discovering your unique Prakruti can help you prevent diseases and maintain overall well-being.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>Get Started</h2>
+                <p>
+                    Take the self-assessment chatbot to determine your Prakruti type. It's quick, easy, and convenient.
+                </p>
+                <a href="https://prakriti-assessment.netlify.app/" class="btn btn-primary">Take Assessment</a>
+            </div>
+        </div>
+
+
+        <div>
+            <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Prakriti_Chatbot"
+  agent-id="048e547e-53ee-424c-b115-d7d82534af70"
+  language-code="en"
+></df-messenger>
+            
+        </div>
+
+        
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+      <span>Build with ❤️ by SIH GPREC TEAM | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
+
+    <!-- Bootstrap JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

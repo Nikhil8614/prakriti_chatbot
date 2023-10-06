@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Three-Question Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .question-container {
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        #result {
+            display: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .container1{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(#8360c3, #2ebf91);
+            padding-bottom: 50px;
+        }
+        .box
+        {
+            box-shadow: 0px 9px 30px rgba(235, 231, 226, 0.3);
+            width: 900px;
+            padding-bottom: 20px;
+        }
+        .center 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .report{
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="box">
+            <center> <h1>Prakruti Assesment</h1> </center>
+            <form id="survey-form">
+                <div class="question-container">
+                    <h2>1. Body Fram</h2>
+                    <label>
+                        <input type="radio" name="q1" value="A" required> Thin,bony and small framed. Hardly gain weight
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="B" required> Medium built. Can gain or lose weight easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="C" required>Large built. Gain weight easily but difficult to lose
+                    </label>
+                </div>
+
+                <div class="question-container">
+                    <h2>2. Walk & Talk</h2>
+                    <label>
+                        <input type="radio" name="q2" value="A" required> Fast walk and talk
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="B" required> Moderate and determined walk
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="C" required> Slow and steady walk
+                    </label>
+                </div>
+
+                <div class="question-container">
+                    <h2>3. Weather Reaction</h2>
+                    <label>
+                        <input type="radio" name="q3" value="A" required> Enjoy warm climate but feel uncomfortable in cool weather
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="B" required> Enjoy cool weather and dislike warm climate
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="C" required> Comfortable for most of the year but prefer summer and spring. Don't like damp climate
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>4. Sweating</h2>
+                    <label>
+                        <input type="radio" name="q4" value="A" required> Sweat little but not much minimal body odour
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="B" required> Sweat a lot. Have medium body odour
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="C" required> Sweat moderately but sweat a lot when working hard. Have strong body odour
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>5. Appetite</h2>
+                    <label>
+                        <input type="radio" name="q5" value="A" required> Irregular. Something i feel hungry sometimes i don't
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="B" required>  Strong and sharp. Always feel hungry
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="C" required>  Decent appetite. Have tendency to eat for comfort and taste
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>6. Skin</h2>
+                    <label>
+                        <input type="radio" name="q6" value="A" required> Normal to dry, rough, thin and cool. Skin issues like dryness, dullness and winkly
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="B" required> Normal to oily, soft, reddish, sensitive and warm. Skin issues like inflammation.
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="C" required> Normal to oil, soft, thick and cool. Skin issues like excessive oily, itching, fungal infection
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>7. Hair</h2>
+                    <label>
+                        <input type="radio" name="q7" value="A" required> Rought, dry and wavy. I get spilt ends easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="B" required>Normal, straight, thin and brownish
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="C" required> Thick, curly and oily. Hair colour tends to be in darker side
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>8. Lips & Teeth</h2>
+                    <label>
+                        <input type="radio" name="q8" value="A" required> Have thin lips than tend to get dry. Teeth can be somewhat uneven. Teeth may require constant attention
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="B" required> Medium sized soft lips. Upper lip slight darker than lower lip. Teeth are medium sized but i tend to suffer from cavities
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="C" required>  Large and smooth lips. Teeth are well formed and aligned and require less care in general
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>9. Eyes</h2>
+                    <label>
+                        <input type="radio" name="q9" value="A" required>  Small in size. Feel dry and sleepy eyes often. I blink a lot
+                    </label>
+                    <label>
+                        <input type="radio" name="q9" value="B" required> Medium in size. I often get reddish eyes
+                    </label>
+                    <label>
+                        <input type="radio" name="q9" value="C" required> Big and attractive. I have thick eye lashes
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>10. General signs</h2>
+                    <label>
+                        <input type="radio" name="q10" value="A" required> Cracking sounds in joints. Small forehead. Nails cracks easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q10" value="B" required> Black moles in body. Medium forehead. Nails are pink and soft
+                    </label>
+                    <label>
+                        <input type="radio" name="q10" value="C" required> Imbalanced body shape: Large hips, broad forehead, wide white nails, emotional traits.
+                    </label>
+                </div>
+                <div class=" question-container">
+                    <h2>11 Memory</h2>
+                    <label>
+                        <input type="radio" name="q11" value="A" required> Quick to learn but quick to forget. Short term memory is good
+                    </label>
+                    <label>
+                        <input type="radio" name="q11" value="B" required> Average speed of learning. But once learnt, never forgets
+                    </label>
+                    <label>
+                        <input type="radio" name="q11" value="C" required> Slow to learn but remembers for a long time. Long term memory is good.
+                    </label>
+                </div>
+                <div class=" question-container">
+                    <h2>12. Mind</h2>
+                    <label>
+                        <input type="radio" name="q12" value="A" required> Mind tends to get restless easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q12" value="B" required>  Mind gets impatient or aggressive easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q12" value="C" required>  Mind remain cool and clam. Mostly, unruffled
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>13. Mind on actions</h2>
+                    <label>
+                        <input type="radio" name="q13" value="A" required> Over thinking.
+                    </label>
+                    <label>
+                        <input type="radio" name="q13" value="B" required> Quick implementation
+                    </label>
+                    <label>
+                        <input type="radio" name="q13" value="C" required> Lazy implementation. Has a tendency to procrastinate.
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>14. Sleep Quality</h2>
+                    <label>
+                        <input type="radio" name="q14" value="A" required> Light and disturbed sleep. I wake up easily in the morning
+                    </label>
+                    <label>
+                        <input type="radio" name="q14" value="B" required>  Moderate but regular. I can go back to sleep easily
+                    </label>
+                    <label>
+                        <input type="radio" name="q14" value="C" required> Deep and heavy. I can't easily wake up in morning
+                    </label>
+                </div>
+                <div class="question-container">
+                    <h2>15. Emotional nature</h2>
+                    <label>
+                        <input type="radio" name="q15" value="A" required> I worry a lot
+                    </label>
+                    <label>
+                        <input type="radio" name="q15" value="B" required> Often feel nervous and anxious
+                    </label>
+                    <label>
+                        <input type="radio" name="q15" value="C" required> Loving and caring. It takes a lot to make me angry
+                    </label>
+                </div>
+
+                <div id="result">
+                    <center><p>Your body type  <span id="most-selected"></span></p></center>
+                    <div></div>
+                </div>
+
+                <div class="center">
+                    <button type="button" class="btn btn-outline-light btn-lg" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 1rem; margin: bottom 20px;" onclick="calculateResult()">Submit</button>
+                </div>
+                <center><a id="downloadButton" href="" class="btn btn-primary" style="margin-top: 30px; display:none; width:180px">Download Report</a></center>
+
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        var anchor = document.getElementById("downloadButton");
+        //const imageUrl='';
+        const imageUrls = [
+            'https://cdn.pixabay.com/photo/2023/09/25/18/43/vata-8275836_150.jpg',
+            'https://cdn.pixabay.com/photo/2023/09/25/17/02/pitta-report-8275610_150.jpg',
+            'https://cdn.pixabay.com/photo/2023/09/25/18/43/doct-8275835_150.jpg',
+            'https://cdn.pixabay.com/photo/2023/09/25/18/51/me-8275848_150.jpg',
+            'https://cdn.pixabay.com/photo/2023/09/25/18/53/doctor-8275851_150.jpg',
+            'https://cdn.pixabay.com/photo/2023/09/25/19/00/19-00-29-941_150.jpg',
+            ];
+            
+
+        // document.getElementById('downloadButton').addEventListener('click', function() {
+            // Replace 'image-url.jpg' with the actual URL of the image you want to download
+            
+            //const imageUrl='https://cdn.pixabay.com/photo/2023/09/24/18/13/kaif-8273544_150.jpg';
+            // Create a fetch request to get the image
+            //fetch(imageUrl)
+             //   .then(response => response.blob())
+               // .then(blob => {
+                    // Create a temporary URL for the blob
+                 //   const blobUrl = window.URL.createObjectURL(blob);
+                    
+                    // Create an anchor element for downloading
+                    //const anchor = document.createElement('a');
+                   // anchor.href = blobUrl;
+                    //anchor.download = 'downloaded-image.jpg';
+                    
+                    // Trigger a click event on the anchor element
+                    //anchor.click();
+                    
+                    // Clean up by revoking the blob URL
+                    //window.URL.revokeObjectURL(blobUrl);
+                //});
+        //}); -->
+        
+        function calculateResult() {
+            const form = document.getElementById("survey-form");
+            const answers = {
+                'A': 0,
+                'B': 0,
+                'C': 0
+            };
+
+            for (let i = 1; i <= 15; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = form.elements[questionName].value;
+                answers[selectedOption]++;
+            }
+
+
+            let bodyType=''
+            let c=answers['A']+answers['B']+answers['C'];
+            if(c==15)
+            {
+                let a=answers['A']
+                let b=answers['B']
+                let c=answers['C']
+                    if(   (  (a==b) || (Math.abs(a-b)==1) ||(Math.abs(a-b)==2) || (Math.abs(a-b)==3) )   && (a>c && b>c)     )
+                    {
+                        bodyType=" is Vata Pitta"
+                        anchor.href=imageUrls[3]
+                    }
+                    else if(   (  (b==c) || (Math.abs(b-c)==1) ||(Math.abs(b-c)==2) || (Math.abs(b-c)==3) )   && (b>a && c>a)     )
+                    {
+                        bodyType=" is Pitta Kapha"
+                        anchor.href=imageUrls[4]
+                    }
+                    else if(   (  (c==a) || (Math.abs(c-a)==1) ||( Math.abs(c-a)==2) || (Math.abs(c-a)==3) )   && (c>b && a>b)     )
+                    {
+                        bodyType=" is Kapha Vata"
+                        anchor.href=imageUrls[5]
+                    }
+                    else if(a>b && a>c)
+                    {
+                        bodyType=" is Vata."
+                        anchor.href=imageUrls[0]
+                    }
+                    else if(b>a && b>c)
+                    {
+                        bodyType="is Pitta."
+                        anchor.href=imageUrls[1]
+
+                    }
+                    else if(c>a && c>b)
+                    {
+                        bodyType="is Kapha."
+                        anchor.href=imageUrls[2]
+                    }
+                    else
+                    {
+                        bodyType="is Tridosa"
+                    }
+                document.getElementById("most-selected").textContent = bodyType;
+                document.getElementById("result").style.display = "block";
+                document.getElementById("downloadButton").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("most-selected").textContent = "can't be determined answer all questions";
+                document.getElementById("result").style.display = "block";    
+                
+            }
+            
+        }
+    </script>
+</body>
+</html> 
